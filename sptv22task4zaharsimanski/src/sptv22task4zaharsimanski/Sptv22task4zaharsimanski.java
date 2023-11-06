@@ -16,17 +16,24 @@ public class Sptv22task4zaharsimanski {
         for (int i = 0; i < array.length; i++) {
             array[i] = (int)(Math.random() * 50) * 2 + 1;
         }
-        
+        System.out.println("NO SORT");
+          int sum = 0;
         for (int i = 0; i < array.length; i++) {
-            System.out.print(array[i] + " ");
-            if ((i + 1) % 10 == 0) {
+            sum += array[i];
+            System.out.printf("%3d", array[i]);
+            if ((i+1) % 10 == 0) {
                 System.out.println();
             }
         }
-        
-        Arrays.sort(array);
-        
-        int sum = 0;
+        System.out.println("SORT");
+           Arrays.sort(array);
+        for (int i = 0; i < array.length; i++) {
+            sum += array[i];
+            System.out.printf("%3d", array[i]);
+            if ((i+1) % 10 == 0) {
+                System.out.println();
+            }
+        }
         for (int i = 0; i < array.length; i++) {
             sum += array[i];
         }
